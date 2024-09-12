@@ -29,7 +29,7 @@ export default function AppWalletProvider({
       // new UnsafeBurnerWalletAdapter(),
       new PhantomWalletAdapter(),
     ],
-    [network],
+    [],
   );
  
   return (
