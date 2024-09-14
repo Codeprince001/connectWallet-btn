@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AppWalletProvider from "./components/AppWalletProvider";
+import Gradientbg from "../assets/dark-bg.jpg"
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gradient-to-br from-[#085f67] to-[#3301a8]">
         <AppWalletProvider>
           {children}
         </AppWalletProvider>
