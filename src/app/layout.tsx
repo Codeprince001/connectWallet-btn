@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import AppWalletProvider from "./components/AppWalletProvider";
+import AppWalletProvider from "@/components/AppWalletProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
