@@ -3,19 +3,25 @@
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Image from "next/image";
 import NFT1 from "../assets/Monking.png"
-// import { useState } from "react";
+import { useState } from "react";
 import WhitielistBtn from "@/components/ActionsBtn/WhitielistBtn";
 import PublicBtn from "@/components/ActionsBtn/PublicBtn";
+import MintButton from "@/components/MintButton";
 
 
 
 export default function Home() {
 
-  // const [isPublic, setisPublic] = useState<boolean>(false)
+  const [mintOption, setMintOption] = useState<string>("")
+
+  const handleMintOptionChange = (mintOption: string) => {
+    setMintOption(mintOption)
+    console.log(mintOption)
+  }
 
   return (
     <main className="min-h-screen">
-      <div className="flex flex-1 justify-between m-10 bg-[#0502366f]">
+      <div className="flex flex-1 justify-between bg-[#0502366f] p-4">
           <h1 className="text-white text-3xl font-extrabold">ERROR 404</h1>
                 <div className="border rounded">
                   <WalletMultiButton style={{backgroundColor: 'black', border: 'none'}} />
@@ -24,6 +30,7 @@ export default function Home() {
 
       
       <div className="mx-[10rem] my-[5rem] border-1 border-[#ccc] rounded-md p-2">
+
         <div className="flex justify-between gap-10 mt-4">
           <div>
             <p className="md:max-w-[70%] max-w-[60%] md:text-[1.3rem]">
@@ -33,10 +40,9 @@ export default function Home() {
 
             {/* Action button details and NFT Image */}
             <div className="flex flex-col gap-4 mt-6 flex-1">
-              <WhitielistBtn/>
-              <PublicBtn/>
+              <WhitielistBtn onClick={() => handleMintOptionChange("Whitelist")}/>
+              <PublicBtn onClick={() => handleMintOptionChange("public")}/>
             </div>
-            
           </div>
 
           <div className="h-[100%]">
@@ -46,7 +52,17 @@ export default function Home() {
               alt="Nft image"
             />
           </div>
+        </div>
 
+
+        <div className="flex flex-1 justify-end mt-[3rem]">
+          {
+            mintOption === "public"
+              ? 
+            (<MintButton mintOption="Mint public"/>)
+              : 
+            (<MintButton mintOption="Mint whitelist"/>)
+          }
         </div>
       </div>
     </main>
