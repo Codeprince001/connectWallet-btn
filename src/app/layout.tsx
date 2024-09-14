@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AppWalletProvider from "./components/AppWalletProvider";
-import Gradientbg from "../assets/dark-bg.jpg"
 
 export const metadata: Metadata = {
   title: "Create Next App",
