@@ -11,7 +11,7 @@ import PublicBtn from "@/components/ActionsBtn/PublicBtn";
 
 export default function Home() {
 
-  const [isPublic, setisPublic] = useState<boolean>(false)
+  // const [isPublic, setisPublic] = useState<boolean>(false)
 
   return (
     <main className="min-h-screen">
