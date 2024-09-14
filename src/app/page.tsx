@@ -3,7 +3,7 @@
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Image from "next/image";
 import NFT1 from "../assets/Monking.png"
-import { useState } from "react";
+// import { useState } from "react";
 import WhitielistBtn from "@/components/ActionsBtn/WhitielistBtn";
 import PublicBtn from "@/components/ActionsBtn/PublicBtn";
 
@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen">
-      <div className="flex flex-1 justify-between m-10">
+      <div className="flex flex-1 justify-between m-10 bg-[#0502366f]">
           <h1 className="text-white text-3xl font-extrabold">ERROR 404</h1>
                 <div className="border rounded">
                   <WalletMultiButton style={{backgroundColor: 'black', border: 'none'}} />
