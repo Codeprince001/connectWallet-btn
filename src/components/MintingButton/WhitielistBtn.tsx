@@ -1,10 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
 
-const WhitielistBtn = ({onClick}: {onClick: () => void}) => {
+const WhitielistBtn = ({onClick, isActive}: {onClick: () => void, isActive: boolean}) => {
+  console.log(isActive)
+  
   return (
     <div 
-      className='bg-[#1d1f28] p-5 rounded-lg hover:bg-[#111230] hover:cursor-pointer'
+      className={`${isActive ? "bg-[#512DA8]": "bg-[#394559]"} p-5 w-[80%] rounded-lg hover:bg-[#4f5f7b] hover:cursor-pointer `}
       onClick={onClick}
     >
         <div>

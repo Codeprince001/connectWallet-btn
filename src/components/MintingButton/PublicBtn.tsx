@@ -3,10 +3,10 @@ import Link from 'next/link';
 
 
 
-const PublicBtn = ({onClick}: {onClick: () => void}) => {
+const PublicBtn = ({onClick, isActive}: {onClick: () => void, isActive: boolean} ) => {
   return (
     <div 
-      className='bg-[#1d1f28] p-5 rounded-lg hover:bg-[#111230] hover:cursor-pointer'
+      className={`w-[80%] p-5 rounded-lg hover:bg-[#4f5f7b] hover:cursor-pointer ${isActive ? "bg-[#512DA8]": "bg-[#394559]"}`}
       onClick={onClick}
     >
       <div>
